@@ -39,3 +39,5 @@ def index():
         daily_recovered.append(int(recovered[i+1])-int(recovered[i]))
     return render_template("index.html",dates=dates,cases=cases,n=days,deaths=deaths,recovered=recovered,countries_data=countries_data,state_data=state_data,daily_cases=daily_cases,daily_deaths=daily_deaths,daily_recovered=daily_recovered,news=covid_news)
 
+if __name__ == "__main__":
+    app.run(debug=True)
